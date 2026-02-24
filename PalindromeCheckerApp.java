@@ -1,28 +1,27 @@
 import java.util.LinkedList;
-import java.util.Queue;
-import java.util.Stack;
 
 public class PalindromeCheckerApp {
 
     public static void main(String[] args) {
 
-        String input = "refer";
-        Deque<Character> deque = new ArrayDeque<>();
+        String input = "level";
+
+        LinkedList<Character> list = new LinkedList<>();
 
         for (char c : input.toCharArray()) {
-            deque.add(c);
+            list.add(c);
         }
 
         boolean isPalindrome = true;
 
-        while (deque.size() > 1) {
-            if (deque.removeFirst() != deque.removeLast()) {
+        while (list.size() > 1) {
+            if (list.removeFirst() != list.removeLast()) {
                 isPalindrome = false;
                 break;
             }
         }
 
-        System.out.println("Palindrome Checker App - UC7");
+        System.out.println("Palindrome Checker App - UC8");
         System.out.println("Input String: " + input);
 
         if (isPalindrome) {
@@ -31,7 +30,7 @@ public class PalindromeCheckerApp {
             System.out.println("Result: The string is not a palindrome.");
         }
 
-        System.out.println("Exiting UC7 flow...");
+        System.out.println("Exiting UC8 flow...");
 
     }
 }
